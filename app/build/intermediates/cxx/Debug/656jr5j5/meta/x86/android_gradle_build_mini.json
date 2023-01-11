@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/mike/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/.cxx/Debug/656jr5j5/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/mike/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/.cxx/Debug/656jr5j5/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "keys-Debug-x86": {
+      "artifactName": "keys",
+      "buildCommandComponents": [
+        "/Users/mike/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/.cxx/Debug/656jr5j5/x86",
+        "keys"
+      ],
+      "abi": "x86",
+      "output": "/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/build/intermediates/cxx/Debug/656jr5j5/obj/x86/libkeys.so",
+      "runtimeFiles": []
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">409922468441-379o98s1143kp1vlgk26e140ej1mgoq0.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://alpha-wallet-android-186eb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">409922468441</string>
+    <string name="google_api_key" translatable="false">AIzaSyANAsW3omQK0Ze19NlIXtQTWNhZWv_PS3k</string>
+    <string name="google_app_id" translatable="false">1:409922468441:android:4695da910af3c1e8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyANAsW3omQK0Ze19NlIXtQTWNhZWv_PS3k</string>
+    <string name="google_storage_bucket" translatable="false">alpha-wallet-android-186eb.appspot.com</string>
+    <string name="project_id" translatable="false">alpha-wallet-android-186eb</string>
+</resources>

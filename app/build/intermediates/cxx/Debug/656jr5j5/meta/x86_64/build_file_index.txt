@@ -1,0 +1,1 @@
+/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/cpp/CMakeLists.txt

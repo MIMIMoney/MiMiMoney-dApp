@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.stormbird.wallet"
+    android:targetSandboxVersion="1"
+    android:versionCode="218"
+    android:versionName="3.60.3" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="32" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Allows unlocking your device and activating its screen so UI tests can succeed -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Allows for storing and retrieving screenshots -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature
+        android:name="android.hardware.fingerprint"
+        android:required="false" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Allows changing locales -->
+    <!-- <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" /> -->
+    <application
+        android:name="com.alphawallet.app.App"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:launchMode="singleTask"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.alphawallet.app.ui.HomeActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar.Splash"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="aw.app" />
+                <data android:host="www.aw.app" />
+                <data android:pathPrefix="/" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="wc" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter android:priority="999" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.ALTERNATIVE" />
+                <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="text/xml" />
+                <data android:mimeType="text/tsml" />
+                <data android:host="*" />
+                <data android:pathPattern="/.*\\.tsml" />
+                <data android:pathPattern="/.*\\..*\\.tsml" />
+                <data android:pathPattern="/.*\\..*\\..*\\.tsml" />
+                <data android:pathPattern="/.*\\.xml" />
+                <data android:pathPattern="/.*\\..*\\.xml" />
+                <data android:pathPattern="/.*\\..*\\..*\\.xml" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.alphawallet.app.ui.ApiV1Activity"
+            android:label="API V1 Activity"
+            android:theme="@style/AppTheme.NoActionBar.Transparent" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="io.stormbird.wallet.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name="com.alphawallet.app.ui.WalletsActivity"
+            android:label="@string/title_account_list" />
+        <activity
+            android:name="com.alphawallet.app.ui.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar.Splash" />
+
+        <service
+            android:name="com.alphawallet.app.service.WalletConnectService"
+            android:enabled="true" />
+        <service
+            android:name="com.alphawallet.app.service.WalletConnectV2Service"
+            android:enabled="true" >
+        </service>
+
+        <activity
+            android:name="com.alphawallet.app.ui.WalletConnectV2Activity"
+            android:label="WalletConnectV2"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.alphawallet.app.ui.WalletConnectNotificationActivity"
+            android:label="WalletConnectV2" />
+        <activity
+            android:name="com.alphawallet.app.ui.NameThisWalletActivity"
+            android:label="@string/name_this_wallet"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.alphawallet.app.ui.ImportWalletActivity"
+            android:label="@string/title_import"
+            android:screenOrientation="sensor"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name="com.alphawallet.app.ui.TransactionDetailActivity"
+            android:label="@string/title_transaction_details" />
+        <activity
+            android:name="com.alphawallet.app.ui.MyAddressActivity"
+            android:label="@string/title_my_address" />
+        <activity
+            android:name="com.alphawallet.app.ui.SendActivity"
+            android:label="@string/title_activity_send"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.alphawallet.app.ui.AddTokenActivity"
+            android:label="@string/title_add_token" />
+        <activity
+            android:name="com.alphawallet.app.ui.AssetDisplayActivity"
+            android:label="@string/title_use_token" />
+        <activity
+            android:name="com.alphawallet.app.ui.RedeemSignatureDisplayActivity"
+            android:label="@string/title_use_token" />
+        <activity
+            android:name="com.alphawallet.app.ui.GasSettingsActivity"
+            android:label="@string/title_send_settings" />
+        <activity
+            android:name="com.alphawallet.app.ui.SellDetailActivity"
+            android:label="@string/action_sell"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.alphawallet.app.ui.RedeemAssetSelectActivity"
+            android:label="@string/title_redeem" />
+        <activity
+            android:name="com.alphawallet.app.ui.ImportTokenActivity"
+            android:label="@string/title_import_token" />
+        <activity
+            android:name="com.alphawallet.app.ui.TransferTicketDetailActivity"
+            android:label="@string/label_transfer_ticket_detail" />
+        <activity
+            android:name="com.alphawallet.app.ui.TokenDetailActivity"
+            android:label="@string/token_details" />
+        <activity
+            android:name="com.alphawallet.app.ui.Erc20DetailActivity"
+            android:label="@string/erc20_details" />
+        <activity
+            android:name="com.alphawallet.app.ui.TokenFunctionActivity"
+            android:label="@string/token_function" />
+        <activity
+            android:name="com.alphawallet.app.ui.FunctionActivity"
+            android:label="@string/token_function" />
+        <activity
+            android:name="com.alphawallet.app.ui.WalletActionsActivity"
+            android:label="Wallet Actions" />
+        <activity
+            android:name="com.alphawallet.app.ui.AddEditDappActivity"
+            android:label="Add DApp" />
+        <activity
+            android:name="com.alphawallet.app.ui.SelectNetworkActivity"
+            android:label="Select DApp Browser Network" />
+        <activity
+            android:name="com.alphawallet.app.ui.SelectNetworkFilterActivity"
+            android:label="Select Network Filters" />
+        <activity
+            android:name="com.alphawallet.app.ui.TokenManagementActivity"
+            android:label="Manage Tokens" />
+        <activity
+            android:name="com.alphawallet.app.ui.SelectLocaleActivity"
+            android:label="Select Language" />
+        <activity
+            android:name="com.alphawallet.app.ui.SelectCurrencyActivity"
+            android:label="Select Currency" />
+        <activity
+            android:name="com.alphawallet.app.ui.ScammerWarningActivity"
+            android:label="Scammer Warning"
+            android:noHistory="true" />
+        <activity
+            android:name="com.alphawallet.app.ui.BackupKeyActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.alphawallet.app.ui.SupportSettingsActivity"
+            android:label="Support Settings" />
+        <activity
+            android:name="com.alphawallet.app.ui.AdvancedSettingsActivity"
+            android:label="Advanced Settings" />
+        <activity
+            android:name="com.alphawallet.app.ui.StaticViewer"
+            android:label="View Text" />
+        <activity
+            android:name="com.alphawallet.app.ui.TokenScriptManagementActivity"
+            android:label="@string/tokenscript_management" />
+        <activity
+            android:name="com.alphawallet.app.ui.TokenActivity"
+            android:label="@string/activity_label" />
+        <activity
+            android:name="com.alphawallet.app.ui.WalletConnectActivity"
+            android:label="WalletConnect"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.alphawallet.app.ui.BackupFlowActivity"
+            android:label="WalletConnect" />
+        <activity
+            android:name="com.alphawallet.app.ui.SignDetailActivity"
+            android:label="Sign Details" />
+        <activity
+            android:name="com.alphawallet.app.ui.WalletConnectSessionActivity"
+            android:label="WalletConnect Sessions" />
+        <activity
+            android:name="com.alphawallet.app.ui.TransactionSuccessActivity"
+            android:label="Transaction Success" />
+        <activity
+            android:name="com.alphawallet.app.ui.SetPriceAlertActivity"
+            android:label="Set New Alert"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.alphawallet.app.ui.AddCustomRPCNetworkActivity"
+            android:label="@string/title_activity_add_custom_rpcnetwork" />
+        <activity
+            android:name="com.alphawallet.app.ui.NFTActivity"
+            android:label="ERC721 Master Activity" />
+        <activity
+            android:name="com.alphawallet.app.ui.Erc1155AssetSelectActivity"
+            android:label="ERC1155 Asset Selection" />
+        <activity
+            android:name="com.alphawallet.app.ui.NFTAssetDetailActivity"
+            android:label="ERC1155 Asset Details" />
+        <activity
+            android:name="com.alphawallet.app.ui.Erc1155AssetListActivity"
+            android:label="ERC1155 Asset Details" />
+        <activity
+            android:name="com.alphawallet.app.ui.TransferNFTActivity"
+            android:label="NFT Transfer" />
+        <activity
+            android:name="com.alphawallet.app.ui.SelectThemeActivity"
+            android:label="Select Mode" />
+        <activity
+            android:name="com.alphawallet.app.ui.SearchActivity"
+            android:label="Search Tokens" />
+        <activity
+            android:name="com.alphawallet.app.ui.QRScanning.QRScannerActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/qr_scanner" />
+        <activity
+            android:name="com.alphawallet.app.ui.SwapActivity"
+            android:label="Native Swap"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.alphawallet.app.ui.SelectRouteActivity"
+            android:label="@string/title_select_route" />
+        <activity
+            android:name="com.alphawallet.app.ui.SelectSwapProvidersActivity"
+            android:label="@string/title_select_exchanges" />
+        <activity
+            android:name="com.alphawallet.app.ui.NodeStatusActivity"
+            android:label="@string/action_node_status" />
+        <activity
+            android:name="com.alphawallet.app.ui.CoinbasePayActivity"
+            android:label="@string/title_buy_with_coinbase_pay" />
+        <activity
+            android:name="com.alphawallet.app.ui.WalletDiagnosticActivity"
+            android:label="@string/key_diagnostic" />
+
+        <service
+            android:name="com.alphawallet.app.service.PriceAlertsService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="true" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+        <activity
+            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+            android:enabled="false"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:process=":playcore_missing_splits_activity"
+            android:stateNotNeeded="true" />
+        <activity
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
+        <service
+            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+            android:enabled="false"
+            android:exported="true" >
+            <meta-data
+                android:name="com.google.android.play.core.assetpacks.versionCode"
+                android:value="11003" />
+        </service>
+        <service
+            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+            android:enabled="false"
+            android:exported="false" />
+        <!--
+             The Mixpanel library will automatically attempt to show available in
+             app notifications every time a new Activity is displayed. To disable this behavior,
+             add the following line. The default value for this option is set to true.
+        -->
+        <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.AutoShowMixpanelUpdates"
+            android:value="false" />
+        -->
+        <!--
+             Set this option to true if you wish for in-app notifications to be displayed without
+             being tracked by Mixpanel. This is useful for testing the integration with your Android app.
+             The default value is false.
+        -->
+        <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.TestMode"
+            android:value="true" />
+        -->
+        <!--
+             Set the following option to true if you wish to see the debug output from the Mixpanel Android
+             library. This may be useful in determining when track calls go out or in-app notifications
+             are fetched. The default value is false.
+        -->
+        <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.EnableDebugLogging"
+            android:value="true" />
+        -->
+        <!--
+             This activity allows your application to show Mixpanel takeover in-app notifications.
+             If you only wish to show mini in-app notifications, you do not need to declare this Activity.
+             You may also specify a different theme to better fit the look and feel of your application.
+        -->
+        <!--
+        <activity android:name="com.mixpanel.android.takeoverinapp.TakeoverInAppActivity"
+                  android:theme="@style/com_mixpanel_android_TakeoverInAppActivityTheme" />
+        -->
+        <!-- This service will allow your application to register for and receive Mixpanel push notifications. -->
+        <!--
+        <service
+            android:name="com.mixpanel.android.mpmetrics.MixpanelFCMMessagingService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        -->
+        <!-- This activity will allow your application to make tracking calls to the MixpanelAPI for notification interactions -->
+        <activity android:name="com.mixpanel.android.mpmetrics.MixpanelNotificationRouteActivity" >
+        </activity>
+
+        <receiver android:name="com.mixpanel.android.mpmetrics.MixpanelPushNotificationDismissedReceiver" >
+        </receiver>
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="io.stormbird.wallet.com.squareup.picasso"
+            android:exported="false" />
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="io.stormbird.wallet.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false" />
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false" />
+
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false" >
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct" />
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" >
+        </service>
+
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <!--
+             FirebaseInstanceIdService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="io.stormbird.wallet.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

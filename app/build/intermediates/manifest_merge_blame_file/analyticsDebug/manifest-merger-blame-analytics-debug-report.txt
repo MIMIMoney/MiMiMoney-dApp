@@ -1,0 +1,1184 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="io.stormbird.wallet"
+4    android:targetSandboxVersion="1"
+5    android:versionCode="218"
+6    android:versionName="3.60.3" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="24"
+10        android:targetSdkVersion="32" />
+11
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:7:5-67
+12-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:7:22-64
+13    <uses-permission android:name="android.permission.VIBRATE" />
+13-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:8:5-66
+13-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:8:22-63
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:9:5-65
+14-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:9:22-62
+15
+16    <!-- Allows unlocking your device and activating its screen so UI tests can succeed -->
+17    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+17-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/debug/AndroidManifest.xml:10:5-75
+17-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/debug/AndroidManifest.xml:10:22-72
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:14:5-68
+18-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:14:22-65
+19
+20    <!-- Allows for storing and retrieving screenshots -->
+21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+21-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:10:5-81
+21-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:10:22-78
+22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+22-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:11:5-80
+22-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:11:22-77
+23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+23-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:12:5-79
+23-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:12:22-76
+24    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+24-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:13:5-74
+24-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:13:22-71
+25    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+25-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:15:5-72
+25-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:15:22-69
+26    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+26-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:16:5-76
+26-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:16:22-74
+27
+28    <uses-feature
+28-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:18:5-20:36
+29        android:name="android.hardware.fingerprint"
+29-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:19:9-52
+30        android:required="false" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+30-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:20:9-33
+31    <uses-feature
+31-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:25:5-27:36
+32        android:name="android.hardware.camera"
+32-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:26:9-47
+33        android:required="false" />
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:27:9-33
+34    <uses-feature
+34-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
+35        android:name="android.hardware.camera.front"
+35-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
+36        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+36-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
+37    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+38    <uses-feature
+38-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
+39        android:name="android.hardware.camera.autofocus"
+39-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:34:9-57
+40        android:required="false" />
+40-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:35:9-33
+41    <uses-feature
+41-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
+42        android:name="android.hardware.camera.flash"
+42-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
+43        android:required="false" />
+43-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
+44    <uses-feature
+44-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
+45        android:name="android.hardware.screen.landscape"
+45-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
+46        android:required="false" />
+46-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
+47    <uses-feature
+47-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
+48        android:name="android.hardware.wifi"
+48-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
+49        android:required="false" />
+49-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
+50
+51    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+51-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:27:5-81
+51-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:27:22-78
+52    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+52-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:26:5-110
+52-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:26:22-107
+53    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Allows changing locales -->
+53-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:26:5-82
+53-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:26:22-79
+54    <!-- <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" /> -->
+55    <application
+55-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:22:5-354:19
+56        android:name="com.alphawallet.app.App"
+56-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:23:9-28
+57        android:allowBackup="false"
+57-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:24:9-36
+58        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+58-->[androidx.core:core:1.7.0] /Users/mike/.gradle/caches/transforms-3/b5576db3997171b33cf37d6c7a12b752/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+59        android:debuggable="true"
+60        android:extractNativeLibs="true"
+60-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:25:9-41
+61        android:fullBackupContent="@xml/backup_rules"
+61-->[com.walletconnect:sign:2.1.0] /Users/mike/.gradle/caches/transforms-3/fb64d7e36e4a9d27d8ea521834e085c8/transformed/jetified-sign-2.1.0/AndroidManifest.xml:9:18-63
+62        android:hardwareAccelerated="false"
+62-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:26:9-44
+63        android:icon="@mipmap/ic_launcher"
+63-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:28:9-43
+64        android:label="@string/app_name"
+64-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:29:9-41
+65        android:largeHeap="true"
+65-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:27:9-33
+66        android:launchMode="singleTask"
+66-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:30:9-40
+67        android:requestLegacyExternalStorage="true"
+67-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:31:9-52
+68        android:roundIcon="@mipmap/ic_launcher_round"
+68-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:32:9-54
+69        android:supportsRtl="true"
+69-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:33:9-35
+70        android:testOnly="false"
+70-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:34:9-33
+71        android:theme="@style/AppTheme.NoActionBar"
+71-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:35:9-52
+72        android:usesCleartextTraffic="true" >
+72-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:36:9-44
+73        <activity
+73-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:39:9-88:20
+74            android:name="com.alphawallet.app.ui.HomeActivity"
+74-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:40:13-44
+75            android:exported="true"
+75-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:41:13-36
+76            android:launchMode="singleTask"
+76-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:42:13-44
+77            android:theme="@style/AppTheme.NoActionBar.Splash"
+77-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:43:13-63
+78            android:windowSoftInputMode="adjustPan" >
+78-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:44:13-52
+79            <intent-filter>
+79-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:45:13-48:29
+80                <action android:name="android.intent.action.MAIN" />
+80-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:46:17-69
+80-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:46:25-66
+81
+82                <category android:name="android.intent.category.LAUNCHER" />
+82-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:47:17-77
+82-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:47:27-74
+83            </intent-filter>
+84            <intent-filter android:autoVerify="true" >
+84-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:49:13-60:29
+84-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:49:28-53
+85                <action android:name="android.intent.action.VIEW" />
+85-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:50:17-69
+85-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:50:25-66
+86
+87                <category android:name="android.intent.category.DEFAULT" />
+87-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:52:17-76
+87-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:52:27-73
+88                <category android:name="android.intent.category.BROWSABLE" />
+88-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:53:17-78
+88-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:53:27-75
+89
+90                <data android:scheme="http" />
+90-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+90-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:23-44
+91                <data android:scheme="https" />
+91-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+91-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:23-44
+92                <data android:host="aw.app" />
+92-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+93                <data android:host="www.aw.app" />
+93-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+94                <data android:pathPrefix="/" />
+94-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+95            </intent-filter>
+96            <intent-filter>
+96-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:61:13-67:29
+97                <data android:scheme="wc" />
+97-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+97-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:23-44
+98
+99                <action android:name="android.intent.action.VIEW" />
+99-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:50:17-69
+99-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:50:25-66
+100
+101                <category android:name="android.intent.category.DEFAULT" />
+101-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:52:17-76
+101-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:52:27-73
+102                <category android:name="android.intent.category.BROWSABLE" />
+102-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:53:17-78
+102-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:53:27-75
+103            </intent-filter>
+104            <intent-filter android:priority="999" >
+104-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:68:13-87:29
+104-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:68:28-50
+105                <action android:name="android.intent.action.VIEW" />
+105-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:50:17-69
+105-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:50:25-66
+106
+107                <category android:name="android.intent.category.DEFAULT" />
+107-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:52:17-76
+107-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:52:27-73
+108                <category android:name="android.intent.category.BROWSABLE" />
+108-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:53:17-78
+108-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:53:27-75
+109                <category android:name="android.intent.category.ALTERNATIVE" />
+109-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:73:17-80
+109-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:73:27-77
+110                <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
+110-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:74:17-89
+110-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:74:27-86
+111
+112                <data android:scheme="file" />
+112-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+112-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:23-44
+113                <data android:scheme="content" />
+113-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+113-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:23-44
+114                <data android:mimeType="text/xml" />
+114-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+115                <data android:mimeType="text/tsml" />
+115-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+116                <data android:host="*" />
+116-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+117                <data android:pathPattern="/.*\\.tsml" />
+117-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+118                <data android:pathPattern="/.*\\..*\\.tsml" />
+118-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+119                <data android:pathPattern="/.*\\..*\\..*\\.tsml" />
+119-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+120                <data android:pathPattern="/.*\\.xml" />
+120-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+121                <data android:pathPattern="/.*\\..*\\.xml" />
+121-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+122                <data android:pathPattern="/.*\\..*\\..*\\.xml" />
+122-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:55:17-47
+123            </intent-filter>
+124        </activity>
+125        <activity
+125-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:90:9-93:47
+126            android:name="com.alphawallet.app.ui.ApiV1Activity"
+126-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:91:13-45
+127            android:label="API V1 Activity"
+127-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:93:13-44
+128            android:theme="@style/AppTheme.NoActionBar.Transparent" />
+128-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:92:13-68
+129
+130        <provider
+131            android:name="androidx.core.content.FileProvider"
+132            android:authorities="io.stormbird.wallet.fileprovider"
+133            android:exported="false"
+134            android:grantUriPermissions="true" >
+135            <meta-data
+136                android:name="android.support.FILE_PROVIDER_PATHS"
+137                android:resource="@xml/filepaths" />
+138        </provider>
+139
+140        <activity
+140-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:105:9-107:58
+141            android:name="com.alphawallet.app.ui.WalletsActivity"
+141-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:106:13-47
+142            android:label="@string/title_account_list" />
+142-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:107:13-55
+143        <activity
+143-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:109:9-111:66
+144            android:name="com.alphawallet.app.ui.SplashActivity"
+144-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:110:13-46
+145            android:theme="@style/AppTheme.NoActionBar.Splash" />
+145-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:111:13-63
+146
+147        <service
+147-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:113:9-115:38
+148            android:name="com.alphawallet.app.service.WalletConnectService"
+148-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:114:13-57
+149            android:enabled="true" />
+149-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:115:13-35
+150        <service
+150-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:117:9-120:19
+151            android:name="com.alphawallet.app.service.WalletConnectV2Service"
+151-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:118:13-59
+152            android:enabled="true" >
+152-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:119:13-35
+153        </service>
+154
+155        <activity
+155-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:122:9-125:47
+156            android:name="com.alphawallet.app.ui.WalletConnectV2Activity"
+156-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:123:13-55
+157            android:label="WalletConnectV2"
+157-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:125:13-44
+158            android:launchMode="singleTop" />
+158-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:124:13-43
+159        <activity
+159-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:127:9-129:47
+160            android:name="com.alphawallet.app.ui.WalletConnectNotificationActivity"
+160-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:128:13-65
+161            android:label="WalletConnectV2" />
+161-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:129:13-44
+162        <activity
+162-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:131:9-134:58
+163            android:name="com.alphawallet.app.ui.NameThisWalletActivity"
+163-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:132:13-54
+164            android:label="@string/name_this_wallet"
+164-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:133:13-53
+165            android:windowSoftInputMode="adjustResize" />
+165-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:134:13-55
+166        <activity
+166-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:136:9-140:77
+167            android:name="com.alphawallet.app.ui.ImportWalletActivity"
+167-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:137:13-52
+168            android:label="@string/title_import"
+168-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:138:13-49
+169            android:screenOrientation="sensor"
+169-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:139:13-47
+170            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+170-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:140:13-74
+171        <activity
+171-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:142:9-144:65
+172            android:name="com.alphawallet.app.ui.TransactionDetailActivity"
+172-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:143:13-57
+173            android:label="@string/title_transaction_details" />
+173-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:144:13-62
+174        <activity
+174-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:145:9-147:56
+175            android:name="com.alphawallet.app.ui.MyAddressActivity"
+175-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:146:13-49
+176            android:label="@string/title_my_address" />
+176-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:147:13-53
+177        <activity
+177-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:149:9-152:58
+178            android:name="com.alphawallet.app.ui.SendActivity"
+178-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:150:13-44
+179            android:label="@string/title_activity_send"
+179-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:151:13-56
+180            android:windowSoftInputMode="adjustResize" />
+180-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:152:13-55
+181        <activity
+181-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:154:9-156:55
+182            android:name="com.alphawallet.app.ui.AddTokenActivity"
+182-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:155:13-48
+183            android:label="@string/title_add_token" />
+183-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:156:13-52
+184        <activity
+184-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:158:9-160:55
+185            android:name="com.alphawallet.app.ui.AssetDisplayActivity"
+185-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:159:13-52
+186            android:label="@string/title_use_token" />
+186-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:160:13-52
+187        <activity
+187-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:162:9-164:55
+188            android:name="com.alphawallet.app.ui.RedeemSignatureDisplayActivity"
+188-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:163:13-62
+189            android:label="@string/title_use_token" />
+189-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:164:13-52
+190        <activity
+190-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:166:9-168:59
+191            android:name="com.alphawallet.app.ui.GasSettingsActivity"
+191-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:167:13-51
+192            android:label="@string/title_send_settings" />
+192-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:168:13-56
+193        <activity
+193-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:170:9-173:55
+194            android:name="com.alphawallet.app.ui.SellDetailActivity"
+194-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:171:13-50
+195            android:label="@string/action_sell"
+195-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:172:13-48
+196            android:windowSoftInputMode="adjustPan" />
+196-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:173:13-52
+197        <activity
+197-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:175:9-177:52
+198            android:name="com.alphawallet.app.ui.RedeemAssetSelectActivity"
+198-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:176:13-57
+199            android:label="@string/title_redeem" />
+199-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:177:13-49
+200        <activity
+200-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:179:9-181:58
+201            android:name="com.alphawallet.app.ui.ImportTokenActivity"
+201-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:180:13-51
+202            android:label="@string/title_import_token" />
+202-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:181:13-55
+203        <activity
+203-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:183:9-185:68
+204            android:name="com.alphawallet.app.ui.TransferTicketDetailActivity"
+204-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:184:13-60
+205            android:label="@string/label_transfer_ticket_detail" />
+205-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:185:13-65
+206        <activity
+206-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:187:9-189:53
+207            android:name="com.alphawallet.app.ui.TokenDetailActivity"
+207-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:188:13-51
+208            android:label="@string/token_details" />
+208-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:189:13-50
+209        <activity
+209-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:191:9-193:53
+210            android:name="com.alphawallet.app.ui.Erc20DetailActivity"
+210-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:192:13-51
+211            android:label="@string/erc20_details" />
+211-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:193:13-50
+212        <activity
+212-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:195:9-197:54
+213            android:name="com.alphawallet.app.ui.TokenFunctionActivity"
+213-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:196:13-53
+214            android:label="@string/token_function" />
+214-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:197:13-51
+215        <activity
+215-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:199:9-201:54
+216            android:name="com.alphawallet.app.ui.FunctionActivity"
+216-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:200:13-48
+217            android:label="@string/token_function" />
+217-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:201:13-51
+218        <activity
+218-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:203:9-205:46
+219            android:name="com.alphawallet.app.ui.WalletActionsActivity"
+219-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:204:13-53
+220            android:label="Wallet Actions" />
+220-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:205:13-43
+221        <activity
+221-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:207:9-209:40
+222            android:name="com.alphawallet.app.ui.AddEditDappActivity"
+222-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:208:13-51
+223            android:label="Add DApp" />
+223-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:209:13-37
+224        <activity
+224-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:211:9-213:59
+225            android:name="com.alphawallet.app.ui.SelectNetworkActivity"
+225-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:212:13-53
+226            android:label="Select DApp Browser Network" />
+226-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:213:13-56
+227        <activity
+227-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:215:9-217:54
+228            android:name="com.alphawallet.app.ui.SelectNetworkFilterActivity"
+228-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:216:13-59
+229            android:label="Select Network Filters" />
+229-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:217:13-51
+230        <activity
+230-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:219:9-221:45
+231            android:name="com.alphawallet.app.ui.TokenManagementActivity"
+231-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:220:13-55
+232            android:label="Manage Tokens" />
+232-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:221:13-42
+233        <activity
+233-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:223:9-225:47
+234            android:name="com.alphawallet.app.ui.SelectLocaleActivity"
+234-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:224:13-52
+235            android:label="Select Language" />
+235-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:225:13-44
+236        <activity
+236-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:227:9-229:47
+237            android:name="com.alphawallet.app.ui.SelectCurrencyActivity"
+237-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:228:13-54
+238            android:label="Select Currency" />
+238-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:229:13-44
+239        <activity
+239-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:231:9-234:40
+240            android:name="com.alphawallet.app.ui.ScammerWarningActivity"
+240-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:232:13-54
+241            android:label="Scammer Warning"
+241-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:233:13-44
+242            android:noHistory="true" />
+242-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:234:13-37
+243        <activity
+243-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:236:9-238:70
+244            android:name="com.alphawallet.app.ui.BackupKeyActivity"
+244-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:237:13-49
+245            android:windowSoftInputMode="stateHidden|adjustResize" />
+245-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:238:13-67
+246        <activity
+246-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:240:9-242:48
+247            android:name="com.alphawallet.app.ui.SupportSettingsActivity"
+247-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:241:13-55
+248            android:label="Support Settings" />
+248-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:242:13-45
+249        <activity
+249-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:244:9-246:49
+250            android:name="com.alphawallet.app.ui.AdvancedSettingsActivity"
+250-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:245:13-56
+251            android:label="Advanced Settings" />
+251-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:246:13-46
+252        <activity
+252-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:248:9-250:41
+253            android:name="com.alphawallet.app.ui.StaticViewer"
+253-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:249:13-44
+254            android:label="View Text" />
+254-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:250:13-38
+255        <activity
+255-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:252:9-254:62
+256            android:name="com.alphawallet.app.ui.TokenScriptManagementActivity"
+256-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:253:13-61
+257            android:label="@string/tokenscript_management" />
+257-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:254:13-59
+258        <activity
+258-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:256:9-258:54
+259            android:name="com.alphawallet.app.ui.TokenActivity"
+259-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:257:13-45
+260            android:label="@string/activity_label" />
+260-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:258:13-51
+261        <activity
+261-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:260:9-263:46
+262            android:name="com.alphawallet.app.ui.WalletConnectActivity"
+262-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:261:13-53
+263            android:label="WalletConnect"
+263-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:262:13-42
+264            android:launchMode="singleTop" />
+264-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:263:13-43
+265        <activity
+265-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:265:9-267:45
+266            android:name="com.alphawallet.app.ui.BackupFlowActivity"
+266-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:266:13-50
+267            android:label="WalletConnect" />
+267-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:267:13-42
+268        <activity
+268-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:269:9-271:44
+269            android:name="com.alphawallet.app.ui.SignDetailActivity"
+269-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:270:13-50
+270            android:label="Sign Details" />
+270-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:271:13-41
+271        <activity
+271-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:273:9-275:54
+272            android:name="com.alphawallet.app.ui.WalletConnectSessionActivity"
+272-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:274:13-60
+273            android:label="WalletConnect Sessions" />
+273-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:275:13-51
+274        <activity
+274-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:277:9-279:51
+275            android:name="com.alphawallet.app.ui.TransactionSuccessActivity"
+275-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:278:13-58
+276            android:label="Transaction Success" />
+276-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:279:13-48
+277        <activity
+277-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:281:9-284:58
+278            android:name="com.alphawallet.app.ui.SetPriceAlertActivity"
+278-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:282:13-53
+279            android:label="Set New Alert"
+279-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:283:13-42
+280            android:windowSoftInputMode="adjustResize" />
+280-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:284:13-55
+281        <activity
+281-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:286:9-288:76
+282            android:name="com.alphawallet.app.ui.AddCustomRPCNetworkActivity"
+282-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:287:13-59
+283            android:label="@string/title_activity_add_custom_rpcnetwork" />
+283-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:288:13-73
+284        <activity
+284-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:290:9-292:54
+285            android:name="com.alphawallet.app.ui.NFTActivity"
+285-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:291:13-43
+286            android:label="ERC721 Master Activity" />
+286-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:292:13-51
+287        <activity
+287-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:294:9-296:55
+288            android:name="com.alphawallet.app.ui.Erc1155AssetSelectActivity"
+288-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:295:13-58
+289            android:label="ERC1155 Asset Selection" />
+289-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:296:13-52
+290        <activity
+290-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:298:9-300:53
+291            android:name="com.alphawallet.app.ui.NFTAssetDetailActivity"
+291-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:299:13-54
+292            android:label="ERC1155 Asset Details" />
+292-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:300:13-50
+293        <activity
+293-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:302:9-304:53
+294            android:name="com.alphawallet.app.ui.Erc1155AssetListActivity"
+294-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:303:13-56
+295            android:label="ERC1155 Asset Details" />
+295-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:304:13-50
+296        <activity
+296-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:306:9-308:44
+297            android:name="com.alphawallet.app.ui.TransferNFTActivity"
+297-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:307:13-51
+298            android:label="NFT Transfer" />
+298-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:308:13-41
+299        <activity
+299-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:310:9-312:43
+300            android:name="com.alphawallet.app.ui.SelectThemeActivity"
+300-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:311:13-51
+301            android:label="Select Mode" />
+301-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:312:13-40
+302        <activity
+302-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:314:9-316:45
+303            android:name="com.alphawallet.app.ui.SearchActivity"
+303-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:315:13-46
+304            android:label="Search Tokens" />
+304-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:316:13-42
+305        <activity
+305-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:318:9-321:50
+306            android:name="com.alphawallet.app.ui.QRScanning.QRScannerActivity"
+306-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:319:13-60
+307            android:hardwareAccelerated="true"
+307-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:320:13-47
+308            android:label="@string/qr_scanner" />
+308-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:321:13-47
+309        <activity
+309-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:323:9-326:58
+310            android:name="com.alphawallet.app.ui.SwapActivity"
+310-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:324:13-44
+311            android:label="Native Swap"
+311-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:325:13-40
+312            android:windowSoftInputMode="adjustResize" />
+312-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:326:13-55
+313        <activity
+313-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:328:9-330:58
+314            android:name="com.alphawallet.app.ui.SelectRouteActivity"
+314-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:329:13-51
+315            android:label="@string/title_select_route" />
+315-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:330:13-55
+316        <activity
+316-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:332:9-334:62
+317            android:name="com.alphawallet.app.ui.SelectSwapProvidersActivity"
+317-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:333:13-59
+318            android:label="@string/title_select_exchanges" />
+318-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:334:13-59
+319        <activity
+319-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:336:9-338:58
+320            android:name="com.alphawallet.app.ui.NodeStatusActivity"
+320-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:337:13-50
+321            android:label="@string/action_node_status" />
+321-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:338:13-55
+322        <activity
+322-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:340:9-342:67
+323            android:name="com.alphawallet.app.ui.CoinbasePayActivity"
+323-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:341:13-51
+324            android:label="@string/title_buy_with_coinbase_pay" />
+324-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:342:13-64
+325        <activity
+325-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:344:9-346:54
+326            android:name="com.alphawallet.app.ui.WalletDiagnosticActivity"
+326-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:345:13-56
+327            android:label="@string/key_diagnostic" />
+327-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:346:13-51
+328
+329        <service
+329-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:348:9-352:43
+330            android:name="com.alphawallet.app.service.PriceAlertsService"
+330-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:349:13-55
+331            android:enabled="true"
+331-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:350:13-35
+332            android:exported="false"
+332-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:351:13-37
+333            android:stopWithTask="true" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+333-->/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/src/main/AndroidManifest.xml:352:13-40
+334        <activity
+334-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:18:9-24:45
+335            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+335-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:19:13-100
+336            android:enabled="false"
+336-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:20:13-36
+337            android:exported="false"
+337-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:21:13-37
+338            android:launchMode="singleInstance"
+338-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:22:13-48
+339            android:process=":playcore_missing_splits_activity"
+339-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:23:13-64
+340            android:stateNotNeeded="true" />
+340-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:24:13-42
+341        <activity
+341-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:25:9-29:65
+342            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+342-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:26:13-93
+343            android:exported="false"
+343-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:27:13-37
+344            android:stateNotNeeded="true"
+344-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:28:13-42
+345            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
+345-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:29:13-62
+346        <service
+346-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:32:9-39:19
+347            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+347-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:33:13-94
+348            android:enabled="false"
+348-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:34:13-36
+349            android:exported="true" >
+349-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:35:13-36
+350            <meta-data
+350-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:36:13-38:41
+351                android:name="com.google.android.play.core.assetpacks.versionCode"
+351-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:37:17-83
+352                android:value="11003" />
+352-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:38:17-38
+353        </service>
+354        <service
+354-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:40:9-43:40
+355            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+355-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:41:13-95
+356            android:enabled="false"
+356-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:42:13-36
+357            android:exported="false" />
+357-->[com.google.android.play:core:1.10.3] /Users/mike/.gradle/caches/transforms-3/2e711fc94cf7c96cc8a4dbd03c49eb26/transformed/jetified-core-1.10.3/AndroidManifest.xml:43:13-37
+358        <!--
+359             The Mixpanel library will automatically attempt to show available in
+360             app notifications every time a new Activity is displayed. To disable this behavior,
+361             add the following line. The default value for this option is set to true.
+362        -->
+363        <!--
+364        <meta-data android:name="com.mixpanel.android.MPConfig.AutoShowMixpanelUpdates"
+365            android:value="false" />
+366        -->
+367        <!--
+368             Set this option to true if you wish for in-app notifications to be displayed without
+369             being tracked by Mixpanel. This is useful for testing the integration with your Android app.
+370             The default value is false.
+371        -->
+372        <!--
+373        <meta-data android:name="com.mixpanel.android.MPConfig.TestMode"
+374            android:value="true" />
+375        -->
+376        <!--
+377             Set the following option to true if you wish to see the debug output from the Mixpanel Android
+378             library. This may be useful in determining when track calls go out or in-app notifications
+379             are fetched. The default value is false.
+380        -->
+381        <!--
+382        <meta-data android:name="com.mixpanel.android.MPConfig.EnableDebugLogging"
+383            android:value="true" />
+384        -->
+385        <!--
+386             This activity allows your application to show Mixpanel takeover in-app notifications.
+387             If you only wish to show mini in-app notifications, you do not need to declare this Activity.
+388             You may also specify a different theme to better fit the look and feel of your application.
+389        -->
+390        <!--
+391        <activity android:name="com.mixpanel.android.takeoverinapp.TakeoverInAppActivity"
+392                  android:theme="@style/com_mixpanel_android_TakeoverInAppActivityTheme" />
+393        -->
+394        <!-- This service will allow your application to register for and receive Mixpanel push notifications. -->
+395        <!--
+396        <service
+397            android:name="com.mixpanel.android.mpmetrics.MixpanelFCMMessagingService"
+398            android:enabled="true"
+399            android:exported="false">
+400            <intent-filter>
+401                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+402            </intent-filter>
+403        </service>
+404        -->
+405        <!-- This activity will allow your application to make tracking calls to the MixpanelAPI for notification interactions -->
+406        <activity android:name="com.mixpanel.android.mpmetrics.MixpanelNotificationRouteActivity" >
+406-->[com.mixpanel.android:mixpanel-android:5.8.4] /Users/mike/.gradle/caches/transforms-3/ab49a83cb6b93ab4d4619f55c6b2942e/transformed/jetified-mixpanel-android-5.8.4/AndroidManifest.xml:75:9-76:20
+406-->[com.mixpanel.android:mixpanel-android:5.8.4] /Users/mike/.gradle/caches/transforms-3/ab49a83cb6b93ab4d4619f55c6b2942e/transformed/jetified-mixpanel-android-5.8.4/AndroidManifest.xml:75:19-98
+407        </activity>
+408
+409        <receiver android:name="com.mixpanel.android.mpmetrics.MixpanelPushNotificationDismissedReceiver" >
+409-->[com.mixpanel.android:mixpanel-android:5.8.4] /Users/mike/.gradle/caches/transforms-3/ab49a83cb6b93ab4d4619f55c6b2942e/transformed/jetified-mixpanel-android-5.8.4/AndroidManifest.xml:78:9-79:20
+409-->[com.mixpanel.android:mixpanel-android:5.8.4] /Users/mike/.gradle/caches/transforms-3/ab49a83cb6b93ab4d4619f55c6b2942e/transformed/jetified-mixpanel-android-5.8.4/AndroidManifest.xml:78:19-106
+410        </receiver>
+411
+412        <service
+412-->[com.google.firebase:firebase-crashlytics:18.2.13] /Users/mike/.gradle/caches/transforms-3/c3b668c77b1e2f02255bd0af9e7630a1/transformed/jetified-firebase-crashlytics-18.2.13/AndroidManifest.xml:15:9-21:19
+413            android:name="com.google.firebase.components.ComponentDiscoveryService"
+413-->[com.google.firebase:firebase-crashlytics:18.2.13] /Users/mike/.gradle/caches/transforms-3/c3b668c77b1e2f02255bd0af9e7630a1/transformed/jetified-firebase-crashlytics-18.2.13/AndroidManifest.xml:16:13-84
+414            android:directBootAware="true"
+414-->[com.google.firebase:firebase-common:20.1.2] /Users/mike/.gradle/caches/transforms-3/ec25c81e3120ca4548c2aff36c490496/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:35:13-43
+415            android:exported="false" >
+415-->[com.google.firebase:firebase-crashlytics:18.2.13] /Users/mike/.gradle/caches/transforms-3/c3b668c77b1e2f02255bd0af9e7630a1/transformed/jetified-firebase-crashlytics-18.2.13/AndroidManifest.xml:17:13-37
+416            <meta-data
+416-->[com.google.firebase:firebase-crashlytics:18.2.13] /Users/mike/.gradle/caches/transforms-3/c3b668c77b1e2f02255bd0af9e7630a1/transformed/jetified-firebase-crashlytics-18.2.13/AndroidManifest.xml:18:13-20:85
+417                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+417-->[com.google.firebase:firebase-crashlytics:18.2.13] /Users/mike/.gradle/caches/transforms-3/c3b668c77b1e2f02255bd0af9e7630a1/transformed/jetified-firebase-crashlytics-18.2.13/AndroidManifest.xml:19:17-115
+418                android:value="com.google.firebase.components.ComponentRegistrar" />
+418-->[com.google.firebase:firebase-crashlytics:18.2.13] /Users/mike/.gradle/caches/transforms-3/c3b668c77b1e2f02255bd0af9e7630a1/transformed/jetified-firebase-crashlytics-18.2.13/AndroidManifest.xml:20:17-82
+419            <meta-data
+419-->[com.google.android.gms:play-services-measurement-api:16.5.0] /Users/mike/.gradle/caches/transforms-3/67bcead434e32c0e2bf39ffcc59de5c9/transformed/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:30:13-32:85
+420                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+420-->[com.google.android.gms:play-services-measurement-api:16.5.0] /Users/mike/.gradle/caches/transforms-3/67bcead434e32c0e2bf39ffcc59de5c9/transformed/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:31:17-139
+421                android:value="com.google.firebase.components.ComponentRegistrar" />
+421-->[com.google.android.gms:play-services-measurement-api:16.5.0] /Users/mike/.gradle/caches/transforms-3/67bcead434e32c0e2bf39ffcc59de5c9/transformed/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:32:17-82
+422            <meta-data
+422-->[com.google.firebase:firebase-installations:17.0.2] /Users/mike/.gradle/caches/transforms-3/ee89f1bdf4dd4143b89f752e958ecb1a/transformed/jetified-firebase-installations-17.0.2/AndroidManifest.xml:18:13-20:85
+423                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+423-->[com.google.firebase:firebase-installations:17.0.2] /Users/mike/.gradle/caches/transforms-3/ee89f1bdf4dd4143b89f752e958ecb1a/transformed/jetified-firebase-installations-17.0.2/AndroidManifest.xml:19:17-127
+424                android:value="com.google.firebase.components.ComponentRegistrar" />
+424-->[com.google.firebase:firebase-installations:17.0.2] /Users/mike/.gradle/caches/transforms-3/ee89f1bdf4dd4143b89f752e958ecb1a/transformed/jetified-firebase-installations-17.0.2/AndroidManifest.xml:20:17-82
+425            <meta-data
+425-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:32:13-34:85
+426                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+426-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:33:17-96
+427                android:value="com.google.firebase.components.ComponentRegistrar" />
+427-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:34:17-82
+428        </service>
+429
+430        <uses-library
+430-->[androidx.window:window:1.0.0] /Users/mike/.gradle/caches/transforms-3/a55068ab669ed15901c9d5b9647802f4/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+431            android:name="androidx.window.extensions"
+431-->[androidx.window:window:1.0.0] /Users/mike/.gradle/caches/transforms-3/a55068ab669ed15901c9d5b9647802f4/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+432            android:required="false" />
+432-->[androidx.window:window:1.0.0] /Users/mike/.gradle/caches/transforms-3/a55068ab669ed15901c9d5b9647802f4/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+433        <uses-library
+433-->[androidx.window:window:1.0.0] /Users/mike/.gradle/caches/transforms-3/a55068ab669ed15901c9d5b9647802f4/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+434            android:name="androidx.window.sidecar"
+434-->[androidx.window:window:1.0.0] /Users/mike/.gradle/caches/transforms-3/a55068ab669ed15901c9d5b9647802f4/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+435            android:required="false" />
+435-->[androidx.window:window:1.0.0] /Users/mike/.gradle/caches/transforms-3/a55068ab669ed15901c9d5b9647802f4/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+436
+437        <provider
+437-->[com.squareup.picasso:picasso:2.71828] /Users/mike/.gradle/caches/transforms-3/9dd70c65cca9da5d3aebdbcbe1ae0c5a/transformed/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+438            android:name="com.squareup.picasso.PicassoProvider"
+438-->[com.squareup.picasso:picasso:2.71828] /Users/mike/.gradle/caches/transforms-3/9dd70c65cca9da5d3aebdbcbe1ae0c5a/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+439            android:authorities="io.stormbird.wallet.com.squareup.picasso"
+439-->[com.squareup.picasso:picasso:2.71828] /Users/mike/.gradle/caches/transforms-3/9dd70c65cca9da5d3aebdbcbe1ae0c5a/transformed/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+440            android:exported="false" />
+440-->[com.squareup.picasso:picasso:2.71828] /Users/mike/.gradle/caches/transforms-3/9dd70c65cca9da5d3aebdbcbe1ae0c5a/transformed/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+441
+442        <activity
+442-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
+443            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+443-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
+444            android:clearTaskOnLaunch="true"
+444-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
+445            android:screenOrientation="sensorLandscape"
+445-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
+446            android:stateNotNeeded="true"
+446-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
+447            android:theme="@style/zxing_CaptureTheme"
+447-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
+448            android:windowSoftInputMode="stateAlwaysHidden" />
+448-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mike/.gradle/caches/transforms-3/0bcca1c2cb2be95985510cd1b2ac16e4/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
+449
+450        <provider
+450-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:31:9-39:20
+451            android:name="androidx.startup.InitializationProvider"
+451-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:32:13-67
+452            android:authorities="io.stormbird.wallet.androidx-startup"
+452-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:33:13-68
+453            android:exported="false" >
+453-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:34:13-37
+454            <meta-data
+454-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:36:13-38:52
+455                android:name="androidx.work.WorkManagerInitializer"
+455-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:37:17-68
+456                android:value="androidx.startup" />
+456-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:38:17-49
+457            <meta-data
+457-->[androidx.emoji2:emoji2:1.0.0] /Users/mike/.gradle/caches/transforms-3/50c9e45ccbf2e64f808e5fe72abc20a1/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+458                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+458-->[androidx.emoji2:emoji2:1.0.0] /Users/mike/.gradle/caches/transforms-3/50c9e45ccbf2e64f808e5fe72abc20a1/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+459                android:value="androidx.startup" />
+459-->[androidx.emoji2:emoji2:1.0.0] /Users/mike/.gradle/caches/transforms-3/50c9e45ccbf2e64f808e5fe72abc20a1/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+460            <meta-data
+460-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mike/.gradle/caches/transforms-3/e052c07f927b3c2f3171b3ea4cdc3659/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+461                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+461-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mike/.gradle/caches/transforms-3/e052c07f927b3c2f3171b3ea4cdc3659/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+462                android:value="androidx.startup" />
+462-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mike/.gradle/caches/transforms-3/e052c07f927b3c2f3171b3ea4cdc3659/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+463        </provider>
+464
+465        <service
+465-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:41:9-46:35
+466            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+466-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:42:13-88
+467            android:directBootAware="false"
+467-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:43:13-44
+468            android:enabled="@bool/enable_system_alarm_service_default"
+468-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:44:13-72
+469            android:exported="false" />
+469-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:45:13-37
+470        <service
+470-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:47:9-53:35
+471            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+471-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:48:13-84
+472            android:directBootAware="false"
+472-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:49:13-44
+473            android:enabled="@bool/enable_system_job_service_default"
+473-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:50:13-70
+474            android:exported="true"
+474-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:51:13-36
+475            android:permission="android.permission.BIND_JOB_SERVICE" />
+475-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:52:13-69
+476        <service
+476-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:54:9-59:35
+477            android:name="androidx.work.impl.foreground.SystemForegroundService"
+477-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:55:13-81
+478            android:directBootAware="false"
+478-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:56:13-44
+479            android:enabled="@bool/enable_system_foreground_service_default"
+479-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:57:13-77
+480            android:exported="false" />
+480-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:58:13-37
+481
+482        <receiver
+482-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:61:9-66:35
+483            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+483-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:62:13-88
+484            android:directBootAware="false"
+484-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:63:13-44
+485            android:enabled="true"
+485-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:64:13-35
+486            android:exported="false" />
+486-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:65:13-37
+487        <receiver
+487-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:67:9-77:20
+488            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+488-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:68:13-106
+489            android:directBootAware="false"
+489-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:69:13-44
+490            android:enabled="false"
+490-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:70:13-36
+491            android:exported="false" >
+491-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:71:13-37
+492            <intent-filter>
+492-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:73:13-76:29
+493                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+493-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:17-87
+493-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:25-84
+494                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+494-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:17-90
+494-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:25-87
+495            </intent-filter>
+496        </receiver>
+497        <receiver
+497-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:78:9-88:20
+498            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+498-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:79:13-104
+499            android:directBootAware="false"
+499-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:80:13-44
+500            android:enabled="false"
+500-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:81:13-36
+501            android:exported="false" >
+501-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:82:13-37
+502            <intent-filter>
+502-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:84:13-87:29
+503                <action android:name="android.intent.action.BATTERY_OKAY" />
+503-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:17-77
+503-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:25-74
+504                <action android:name="android.intent.action.BATTERY_LOW" />
+504-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:17-76
+504-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:25-73
+505            </intent-filter>
+506        </receiver>
+507        <receiver
+507-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:89:9-99:20
+508            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+508-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:90:13-104
+509            android:directBootAware="false"
+509-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:91:13-44
+510            android:enabled="false"
+510-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:92:13-36
+511            android:exported="false" >
+511-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:93:13-37
+512            <intent-filter>
+512-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:95:13-98:29
+513                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+513-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:17-83
+513-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:25-80
+514                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+514-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:17-82
+514-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:25-79
+515            </intent-filter>
+516        </receiver>
+517        <receiver
+517-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:100:9-109:20
+518            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+518-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:101:13-103
+519            android:directBootAware="false"
+519-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:102:13-44
+520            android:enabled="false"
+520-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:103:13-36
+521            android:exported="false" >
+521-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:104:13-37
+522            <intent-filter>
+522-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:106:13-108:29
+523                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+523-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:17-79
+523-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:25-76
+524            </intent-filter>
+525        </receiver>
+526        <receiver
+526-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:110:9-121:20
+527            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+527-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:111:13-88
+528            android:directBootAware="false"
+528-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:112:13-44
+529            android:enabled="false"
+529-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:113:13-36
+530            android:exported="false" >
+530-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:114:13-37
+531            <intent-filter>
+531-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:116:13-120:29
+532                <action android:name="android.intent.action.BOOT_COMPLETED" />
+532-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:117:17-79
+532-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:117:25-76
+533                <action android:name="android.intent.action.TIME_SET" />
+533-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:17-73
+533-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:25-70
+534                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+534-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:17-81
+534-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:25-78
+535            </intent-filter>
+536        </receiver>
+537        <receiver
+537-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:122:9-131:20
+538            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+538-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:123:13-99
+539            android:directBootAware="false"
+539-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:124:13-44
+540            android:enabled="@bool/enable_system_alarm_service_default"
+540-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:125:13-72
+541            android:exported="false" >
+541-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:126:13-37
+542            <intent-filter>
+542-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:128:13-130:29
+543                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+543-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:17-98
+543-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:25-95
+544            </intent-filter>
+545        </receiver>
+546        <receiver
+546-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:132:9-142:20
+547            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+547-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:133:13-78
+548            android:directBootAware="false"
+548-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:134:13-44
+549            android:enabled="true"
+549-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:135:13-35
+550            android:exported="true"
+550-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:136:13-36
+551            android:permission="android.permission.DUMP" >
+551-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:137:13-57
+552            <intent-filter>
+552-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:139:13-141:29
+553                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+553-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:17-88
+553-->[androidx.work:work-runtime:2.7.1] /Users/mike/.gradle/caches/transforms-3/4b13d85737b3c3a7bb78f9a5bde8619b/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:25-85
+554            </intent-filter>
+555        </receiver>
+556        <receiver
+556-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:29:9-33:20
+557            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+557-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:30:13-85
+558            android:enabled="true"
+558-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:31:13-35
+559            android:exported="false" >
+559-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:32:13-37
+560        </receiver>
+561        <receiver
+561-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:34:9-42:20
+562            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+562-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:35:13-100
+563            android:enabled="true"
+563-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:36:13-35
+564            android:exported="true"
+564-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:37:13-36
+565            android:permission="android.permission.INSTALL_PACKAGES" >
+565-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:38:13-69
+566            <intent-filter>
+566-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:39:13-41:29
+567                <action android:name="com.android.vending.INSTALL_REFERRER" />
+567-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:40:17-79
+567-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:40:25-76
+568            </intent-filter>
+569        </receiver>
+570
+571        <service
+571-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:44:9-47:40
+572            android:name="com.google.android.gms.measurement.AppMeasurementService"
+572-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:45:13-84
+573            android:enabled="true"
+573-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:46:13-35
+574            android:exported="false" />
+574-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:47:13-37
+575        <service
+575-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:48:9-52:72
+576            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+576-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:49:13-87
+577            android:enabled="true"
+577-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:50:13-35
+578            android:exported="false"
+578-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:51:13-37
+579            android:permission="android.permission.BIND_JOB_SERVICE" />
+579-->[com.google.android.gms:play-services-measurement:16.5.0] /Users/mike/.gradle/caches/transforms-3/7ee59d5e4c0c98cfe137a1fbad00af1f/transformed/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:52:13-69
+580        <service
+580-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/mike/.gradle/caches/transforms-3/7f78a6c33ff33aa3a67d07568f6368a9/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:29:9-35:19
+581            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+581-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/mike/.gradle/caches/transforms-3/7f78a6c33ff33aa3a67d07568f6368a9/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:30:13-103
+582            android:exported="false" >
+582-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/mike/.gradle/caches/transforms-3/7f78a6c33ff33aa3a67d07568f6368a9/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:31:13-37
+583            <meta-data
+583-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/mike/.gradle/caches/transforms-3/7f78a6c33ff33aa3a67d07568f6368a9/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:32:13-34:39
+584                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+584-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/mike/.gradle/caches/transforms-3/7f78a6c33ff33aa3a67d07568f6368a9/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:33:17-94
+585                android:value="cct" />
+585-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/mike/.gradle/caches/transforms-3/7f78a6c33ff33aa3a67d07568f6368a9/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:34:17-36
+586        </service>
+587        <service
+587-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/mike/.gradle/caches/transforms-3/a953874232abf8254bb8d4c296ccc422/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:26:9-30:19
+588            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+588-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/mike/.gradle/caches/transforms-3/a953874232abf8254bb8d4c296ccc422/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:27:13-117
+589            android:exported="false"
+589-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/mike/.gradle/caches/transforms-3/a953874232abf8254bb8d4c296ccc422/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:28:13-37
+590            android:permission="android.permission.BIND_JOB_SERVICE" >
+590-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/mike/.gradle/caches/transforms-3/a953874232abf8254bb8d4c296ccc422/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:29:13-69
+591        </service>
+592
+593        <receiver
+593-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/mike/.gradle/caches/transforms-3/a953874232abf8254bb8d4c296ccc422/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:32:9-34:40
+594            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+594-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/mike/.gradle/caches/transforms-3/a953874232abf8254bb8d4c296ccc422/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:33:13-132
+595            android:exported="false" />
+595-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/mike/.gradle/caches/transforms-3/a953874232abf8254bb8d4c296ccc422/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:34:13-37
+596        <receiver
+596-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:37:9-44:20
+597            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+597-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:38:13-78
+598            android:exported="true"
+598-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:39:13-36
+599            android:permission="com.google.android.c2dm.permission.SEND" >
+599-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:40:13-73
+600            <intent-filter>
+600-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:41:13-43:29
+601                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+601-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:42:17-81
+601-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:42:25-78
+602            </intent-filter>
+603        </receiver>
+604        <!--
+605             FirebaseInstanceIdService performs security checks at runtime,
+606             no need for explicit permissions despite exported="true"
+607        -->
+608        <service
+608-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:50:9-56:19
+609            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+609-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:51:13-77
+610            android:exported="true" >
+610-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:52:13-36
+611            <intent-filter android:priority="-500" >
+611-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:53:13-55:29
+611-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:53:28-51
+612                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+612-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:54:17-80
+612-->[com.google.firebase:firebase-iid:17.1.2] /Users/mike/.gradle/caches/transforms-3/233097a6895fad0c18061f99d8e3411e/transformed/jetified-firebase-iid-17.1.2/AndroidManifest.xml:54:25-77
+613            </intent-filter>
+614        </service>
+615
+616        <provider
+616-->[com.google.firebase:firebase-common:20.1.2] /Users/mike/.gradle/caches/transforms-3/ec25c81e3120ca4548c2aff36c490496/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:26:9-31:39
+617            android:name="com.google.firebase.provider.FirebaseInitProvider"
+617-->[com.google.firebase:firebase-common:20.1.2] /Users/mike/.gradle/caches/transforms-3/ec25c81e3120ca4548c2aff36c490496/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:27:13-77
+618            android:authorities="io.stormbird.wallet.firebaseinitprovider"
+618-->[com.google.firebase:firebase-common:20.1.2] /Users/mike/.gradle/caches/transforms-3/ec25c81e3120ca4548c2aff36c490496/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:28:13-72
+619            android:directBootAware="true"
+619-->[com.google.firebase:firebase-common:20.1.2] /Users/mike/.gradle/caches/transforms-3/ec25c81e3120ca4548c2aff36c490496/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:29:13-43
+620            android:exported="false"
+620-->[com.google.firebase:firebase-common:20.1.2] /Users/mike/.gradle/caches/transforms-3/ec25c81e3120ca4548c2aff36c490496/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:30:13-37
+621            android:initOrder="100" />
+621-->[com.google.firebase:firebase-common:20.1.2] /Users/mike/.gradle/caches/transforms-3/ec25c81e3120ca4548c2aff36c490496/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:31:13-36
+622
+623        <activity
+623-->[com.google.android.gms:play-services-base:16.0.1] /Users/mike/.gradle/caches/transforms-3/442017347b10fbb79d69034487469099/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+624            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+624-->[com.google.android.gms:play-services-base:16.0.1] /Users/mike/.gradle/caches/transforms-3/442017347b10fbb79d69034487469099/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+625            android:exported="false"
+625-->[com.google.android.gms:play-services-base:16.0.1] /Users/mike/.gradle/caches/transforms-3/442017347b10fbb79d69034487469099/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+626            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+626-->[com.google.android.gms:play-services-base:16.0.1] /Users/mike/.gradle/caches/transforms-3/442017347b10fbb79d69034487469099/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+627
+628        <meta-data
+628-->[com.google.android.gms:play-services-basement:18.1.0] /Users/mike/.gradle/caches/transforms-3/2c69b03189c251e6f29ac3554337fbbf/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+629            android:name="com.google.android.gms.version"
+629-->[com.google.android.gms:play-services-basement:18.1.0] /Users/mike/.gradle/caches/transforms-3/2c69b03189c251e6f29ac3554337fbbf/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+630            android:value="@integer/google_play_services_version" />
+630-->[com.google.android.gms:play-services-basement:18.1.0] /Users/mike/.gradle/caches/transforms-3/2c69b03189c251e6f29ac3554337fbbf/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+631
+632        <service
+632-->[androidx.room:room-runtime:2.2.5] /Users/mike/.gradle/caches/transforms-3/2d03d889679d804c9c9265fdcd614e93/transformed/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+633            android:name="androidx.room.MultiInstanceInvalidationService"
+633-->[androidx.room:room-runtime:2.2.5] /Users/mike/.gradle/caches/transforms-3/2d03d889679d804c9c9265fdcd614e93/transformed/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+634            android:directBootAware="true"
+634-->[androidx.room:room-runtime:2.2.5] /Users/mike/.gradle/caches/transforms-3/2d03d889679d804c9c9265fdcd614e93/transformed/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+635            android:exported="false" />
+635-->[androidx.room:room-runtime:2.2.5] /Users/mike/.gradle/caches/transforms-3/2d03d889679d804c9c9265fdcd614e93/transformed/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+636    </application>
+637
+638</manifest>

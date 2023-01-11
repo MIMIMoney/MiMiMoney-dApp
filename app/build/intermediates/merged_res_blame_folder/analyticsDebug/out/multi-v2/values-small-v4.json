@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/mike/Desktop/MiMi/MiMi Money Wallet/alpha-wallet-android/app/build/intermediates/incremental/mergeAnalyticsDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/mike/.gradle/caches/transforms-3/afd2f2d991b458c7ddee34f962fc65a3/transformed/material-1.6.1/res/values-small-v4/values-small-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,128,198,270",
+                        "endColumns": "72,69,71,69",
+                        "endOffsets": "123,193,265,335"
+                    }
+                }
+            ]
+        }
+    ]
+}
